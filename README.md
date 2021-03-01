@@ -1,7 +1,7 @@
 # Simple Rate Limit
 
 ### Introduction
-The project used to implement simple rate limit project.
+The project is used to implement simple rate limit project.
 
 Used techonologies:
 - Use `echo` as web service framework to handle http request.
