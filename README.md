@@ -11,6 +11,7 @@ Used technologies:
 - `dig` as dependency injection component.
 - `dockertest` and `httpexpect` as test utility for integration testing.
 
+The reason for using redis is because it can simply use `incr` to make a counter 
 
 ### Rules
 - Server can only accept 60 requests per minute each IP (use `X-Forwarded-For`).
