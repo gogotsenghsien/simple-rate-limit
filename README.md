@@ -12,7 +12,7 @@ Used techonologies:
 - Use `dockertest` and `httpexpect` as test utility for integration testing.
 
 
-### Rule
+### Rules
 - Server can only accept 60 requests per minute each IP.
 - It will response the text of N if N <= 60.
 - It will response the text "Error" if N > 60.
