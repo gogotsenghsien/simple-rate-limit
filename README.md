@@ -16,7 +16,7 @@ The reason for using redis is because it can simply use `incr` to make a counter
 ### Rules
 - Server can only accept 60 requests per minute each IP (use `X-Forwarded-For`).
 - It will response the text of N if N <= 60.
-- It will response the text "Error" if N > 60.
+- It will response the text `Error` if N > 60.
 
 ### Demo
 The project is hosted in [Heroku](https://young-wave-60838.herokuapp.com/) and uses `Heroku Redis` as database.
