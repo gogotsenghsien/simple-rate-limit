@@ -3,7 +3,7 @@
 ### Introduction
 The project is used to implement simple rate-limit project.
 
-Used techonologies:
+Used technologies:
 - Use `echo` as web service framework to handle http request.
 - Use `redis` as cache database to calculate request limit.
 - Use `viper` as config component.
