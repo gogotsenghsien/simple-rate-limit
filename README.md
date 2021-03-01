@@ -4,12 +4,12 @@
 The project is used to implement simple rate-limit project.
 
 Used technologies:
-- Use `echo` as web service framework to handle http request.
-- Use `redis` as cache database to calculate request limit.
-- Use `viper` as config component.
-- Use `logrus` as log component.
-- Use `dig` as dependency injection component.
-- Use `dockertest` and `httpexpect` as test utility for integration testing.
+- `echo` as web service framework to handle http request.
+- `redis` as cache database to calculate request limit.
+- `viper` as config component.
+- `logrus` as log component.
+- `dig` as dependency injection component.
+- `dockertest` and `httpexpect` as test utility for integration testing.
 
 
 ### Rules
