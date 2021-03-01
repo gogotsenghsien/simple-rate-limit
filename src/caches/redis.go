@@ -10,8 +10,8 @@ type Redis struct {
 }
 
 func NewRedis(config *configs.Config) (*Redis, error) {
-	host := config.GetString("connections.redis.host")
-	password := config.GetString("connections.redis.password")
+	host := config.GetString("redis.url")
+	password := config.GetString("redis.password")
 	client := redis.NewClusterClient(&redis.ClusterOptions{
 		Addrs:    []string{host},
 		Password: password,

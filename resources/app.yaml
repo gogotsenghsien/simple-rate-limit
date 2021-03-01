@@ -1,6 +1,5 @@
-connections:
-  redis:
-    host: localhost:7000
+redis:
+    url: localhost:7000
     password:
 logs:
   threshold: info
