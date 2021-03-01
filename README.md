@@ -13,7 +13,7 @@ Used techonologies:
 
 
 ### Rules
-- Server can only accept 60 requests per minute each IP (use header `X-Forwarded-For`).
+- Server can only accept 60 requests per minute each IP (use `X-Forwarded-For`).
 - It will response the text of N if N <= 60.
 - It will response the text "Error" if N > 60.
 
