@@ -1,7 +1,7 @@
 # Simple Rate Limit
 
 ### Introduction
-The project is used to implement simple rate limit project.
+The project is used to implement simple rate-limit project.
 
 Used techonologies:
 - Use `echo` as web service framework to handle http request.
@@ -13,7 +13,7 @@ Used techonologies:
 
 
 ### Rules
-- Server can only accept 60 requests per minute each IP.
+- Server can only accept 60 requests per minute each IP (use header `X-Forwarded-For`).
 - It will response the text of N if N <= 60.
 - It will response the text "Error" if N > 60.
 
