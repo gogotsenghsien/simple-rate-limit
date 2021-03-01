@@ -17,6 +17,7 @@ func NewConfig() (*Config, error) {
 	v.SetConfigName("app")
 	v.AddConfigPath("./resources")
 	v.AddConfigPath("../resources")
+	v.AddConfigPath("../../resources")
 	v.AutomaticEnv()
 	v.SetEnvKeyReplacer(strings.NewReplacer(".", "_"))
 	if err := v.ReadInConfig(); err != nil {

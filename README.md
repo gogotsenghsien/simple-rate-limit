@@ -25,7 +25,7 @@ It's easy to send request by `curl -X POST https://young-wave-60838.herokuapp.co
 ### Test (For Mac)
 Required: Docker Desktop, Go.
 
-Execute `go test -run=. -v ./tests` to see the test result.
+Execute `go test -run=. -v ./src/tests` to see the test result.
 
 The detail are listed below:
 - Use `dockertest` to run docker `redis` container as database.

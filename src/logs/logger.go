@@ -34,6 +34,14 @@ func (l Logger) RearrangeFields(pairs ...interface{}) map[string]interface{} {
 	if len(pairs)%2 != 0 {
 		return nil
 	}
+
+	// transfer pairs to map
+	for i := 0; i < len(pairs); i += 2 {
+		if key, ok := pairs[i].(string); ok {
+			value := pairs[i+1]
+			result[key] = value
+		}
+	}
 	return result
 }
 
