@@ -19,10 +19,12 @@ Used techonologies:
 
 ### Demo
 The project is hosted in [Heroku](https://young-wave-60838.herokuapp.com/) and uses `Heroku Redis` as database.
+
 It's easy to send request by `curl -X POST https://young-wave-60838.herokuapp.com/post` to test the function if works.
 
 ### Test (For Mac)
 Required: Docker Desktop, Go.
+
 Execute `go test -run=. -v ./tests` to see the test result.
 
 The detail are listed below:
