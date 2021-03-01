@@ -1,6 +1,8 @@
 package restful
 
 import (
+	"net/http"
+
 	"github.com/gogotsenghsien/simple-rate-limit/src/api/restful/handlers"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
@@ -18,6 +20,9 @@ func (s *Server) Run() {
 	e.Use(middleware.Recover())
 
 	// add routes
+	e.GET("/", func(c echo.Context) error {
+		return c.String(http.StatusOK, "Welcome Here")
+	})
 	e.POST("/post", s.postHandler.AddPost)
 
 	// start server
