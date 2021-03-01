@@ -6,14 +6,14 @@ import (
 )
 
 type Redis struct {
-	*redis.ClusterClient
+	*redis.Client
 }
 
 func NewRedis(config *configs.Config) (*Redis, error) {
 	host := config.GetString("redis.url")
 	password := config.GetString("redis.password")
-	client := redis.NewClusterClient(&redis.ClusterOptions{
-		Addrs:    []string{host},
+	client := redis.NewClient(&redis.Options{
+		Addr:     host,
 		Password: password,
 	})
 	if _, err := client.Ping().Result(); err != nil {
