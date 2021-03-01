@@ -1,6 +1,5 @@
 redis:
     url: localhost:6379
-    password:
 logs:
   threshold: info
 limits:
