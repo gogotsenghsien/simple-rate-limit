@@ -32,5 +32,5 @@ The detail are listed below:
 2. Start running http server for integration testing.
 3. Use `httpexpect` to check responses if correct.
     - First, call `/post` 60 times, it must be responsed the text of requested count with http status `200`.
-    - Then, call `/post` once, it must be responsed the text "Error" with http status `429`.
+    - Then, call `/post` once, it must be responsed the text `Error` with http status `429`.
 4. Stop running http server and purge `redis` container.
