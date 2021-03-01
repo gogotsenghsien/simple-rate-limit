@@ -1,0 +1,8 @@
+connections:
+  redis:
+    host: localhost:7000
+    password:
+logs:
+  threshold: info
+limits:
+  request: 60
