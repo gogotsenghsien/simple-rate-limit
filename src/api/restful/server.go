@@ -2,6 +2,7 @@ package restful
 
 import (
 	"fmt"
+	"net/http"
 
 	"github.com/gogotsenghsien/simple-rate-limit/src/api/restful/handlers"
 	"github.com/gogotsenghsien/simple-rate-limit/src/configs"
@@ -22,6 +23,9 @@ func (s *Server) NewEchoServer() *echo.Echo {
 	e.Use(middleware.Recover())
 
 	// add routes
+	e.GET("/", func(c echo.Context) error {
+		return c.String(http.StatusOK, "Welcome to Chris's home.")
+	})
 	e.POST("/post", s.postHandler.AddPost)
 	return e
 }
