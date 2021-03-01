@@ -7,6 +7,7 @@ import (
 
 const (
 	FieldError = "err"
+	FieldIP    = "ip"
 )
 
 type Logger struct {

@@ -30,6 +30,7 @@ func (h *PostHandler) AddPost(c echo.Context) error {
 	// get client ip address
 	ipExtractor := echo.ExtractIPFromXFFHeader()
 	ip := ipExtractor(c.Request())
+	h.logger.Info("Try to add post", logs.FieldIP, ip)
 
 	// get requested nums per minute by redis
 	pipe := h.redis.TxPipeline()
