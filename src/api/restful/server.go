@@ -14,7 +14,7 @@ type Server struct {
 	postHandler *handlers.PostHandler
 }
 
-func (s *Server) Run() {
+func (s *Server) NewEchoServer() *echo.Echo {
 	e := echo.New()
 
 	// add middleware
@@ -23,8 +23,13 @@ func (s *Server) Run() {
 
 	// add routes
 	e.POST("/post", s.postHandler.AddPost)
+	return e
+}
 
-	// start server
+func (s *Server) Run() {
+	e := s.NewEchoServer()
+
+	// start running server
 	port := s.config.GetInt("port")
 	e.Logger.Fatal(e.Start(fmt.Sprintf(":%d", port)))
 }

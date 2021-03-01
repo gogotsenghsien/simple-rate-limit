@@ -13,6 +13,7 @@ func BuildContainer() *dig.Container {
 	container := dig.New()
 	_ = container.Provide(logs.NewLogger)
 	_ = container.Provide(configs.NewConfig)
+	_ = container.Provide(caches.NewRedisConn)
 	_ = container.Provide(caches.NewRedis)
 	_ = container.Provide(handlers.NewPostHandler)
 	_ = container.Provide(restful.NewServer)
