@@ -11,7 +11,7 @@ Used technologies:
 - `dig` as dependency injection component.
 - `dockertest` and `httpexpect` as test utility for integration testing.
 
-The reason for using redis is because it can simply use `incr` to make a counter.
+The reason for using redis is that it allows me to use `incr` to make a counter easily.
 
 ### Rules
 - Server can only accept 60 requests per minute each IP (use `X-Forwarded-For`).
@@ -21,7 +21,7 @@ The reason for using redis is because it can simply use `incr` to make a counter
 ### Demo
 The project is hosted in [Heroku](https://young-wave-60838.herokuapp.com/) and uses `Heroku Redis` as database.
 
-It's easy to send request by `curl -X POST https://young-wave-60838.herokuapp.com/post` to test this function.
+Sending requests by `curl -X POST https://young-wave-60838.herokuapp.com/post` allows you to test this function easily.
 
 ### Test (For Mac)
 Required: Docker Desktop, Go.
